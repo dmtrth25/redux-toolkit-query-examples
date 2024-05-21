@@ -3,7 +3,7 @@ import { RecipeItem } from './components/recipe-item'
 import { useGetRecipesQuery } from './store/api/api'
 
 function App() {
-  const { isLoading, data } = useGetRecipesQuery()
+  const { isLoading, data } = useGetRecipesQuery(null)
   console.log(data)
 
   return (

@@ -1,6 +1,8 @@
+import { FC } from 'react'
+import { TRecipeItem } from '../../types/recipe.types'
 import styles from './RecipeItem.module.css'
 
-export const RecipeItem = ({ recipe }) => {
+export const RecipeItem: FC<TRecipeItem> = ({ recipe }) => {
   return (
     <div className={styles.item}>
       <img src={recipe.image} alt={recipe.name} className={styles.image} />

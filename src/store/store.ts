@@ -9,6 +9,9 @@ const reducers = combineReducers({
 
 export const store = configureStore({
   reducer: reducers,
-  middleware: (getDefaultMiddleware) => // include rtk query
-    getDefaultMiddleware().concat(api.middleware)
+  middleware: (
+    getDefaultMiddleware, // include rtk query
+  ) => getDefaultMiddleware().concat(api.middleware),
 })
+
+export type RootState = ReturnType<typeof store.getState>
